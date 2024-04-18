@@ -1,0 +1,844 @@
+{
+  "id": "ea0e828d-2a25-40b7-80a8-2908457ea882",
+  "version": "2.0",
+  "name": "Major Project",
+  "url": "http://localhost/website/web.php?countryName=Germany",
+  "tests": [{
+    "id": "5eec61f5-5962-43f7-93fb-09470e503a8a",
+    "name": "Load the page and confirm a default country has been loaded.",
+    "commands": [{
+      "id": "72b0a06d-d7dd-4c3e-b850-6696a71ab10c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/website/web.php?countryName=Germany",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b92ad592-4fe4-4d8a-8088-eefea9a7262a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4684c600-92a5-4f4b-ad06-a556de3e6c1d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=h3:nth-child(3)",
+      "targets": [
+        ["css=h3:nth-child(3)", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Temperature Data for Germany')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d2bad8ba-3a37-426f-bad3-85ef5acabbae",
+    "name": "Verify default country shows the comparison table",
+    "commands": [{
+      "id": "6972833e-d21a-428b-9f96-2f47d11f5f3c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/website/web.php?countryName=Germany",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e80e6c7-c6a8-4d71-967a-0dd54ba9cbcf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d60f0c4d-b139-4778-9787-40258fbc8421",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=table:nth-child(4) tr:nth-child(1) > td:nth-child(2)",
+      "targets": [
+        ["css=table:nth-child(4) tr:nth-child(1) > td:nth-child(2)", "css:finder"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'10.0323')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a4fde8d-0d85-48a4-be8c-d30dee8dbd1a",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=tr:nth-child(4) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(3)", "css:finder"],
+        ["xpath=//tr[4]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'10.69')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8eac3da6-081e-485a-bf3d-fff5a800a611",
+    "name": "Verify default graph has been produced",
+    "commands": [{
+      "id": "e31de975-c7e1-4831-8f56-79217e860077",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/website/web.php?countryName=Germany",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a8d2437-4d80-4d90-83c1-2bc06943338f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a537bd9b-00fb-4ee2-b493-5d1938f3454b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=temperatureChart",
+      "targets": [
+        ["id=temperatureChart", "id"],
+        ["css=#temperatureChart", "css:finder"],
+        ["xpath=//canvas[@id='temperatureChart']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e9850db6-f703-4481-b510-1526a16962a1",
+    "name": "Verify default historical table and graph are loaded",
+    "commands": [{
+      "id": "8bcae45a-4bdb-45ae-ba6e-5390adba4f7b",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/website/web.php?countryName=Germany",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55a9aa56-b4b6-4802-908f-334cb9946335",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cfb0e415-4ff9-42cd-a6e7-eaf1cfddc65b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=tr:nth-child(13) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(13) > td:nth-child(2)", "css:finder"],
+        ["xpath=//tr[13]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'7.47')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f17d0ce-4a16-4891-a784-df4e9f021fd8",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=historicalTemperatureChart",
+      "targets": [
+        ["id=historicalTemperatureChart", "id"],
+        ["css=#historicalTemperatureChart", "css:finder"],
+        ["xpath=//canvas[@id='historicalTemperatureChart']", "xpath:attributes"],
+        ["xpath=//div[3]/canvas", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f40b173f-7b16-4d45-a98f-6e24fe4235ea",
+    "name": "Search up a country and very it displays the correct comparison data",
+    "commands": [{
+      "id": "bf2dfb21-bd22-431a-b7ee-bdd3542e3b45",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/website/web.php?countryName=Germany",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b37b7be9-1fec-403e-8bcf-fe3e3e8c8469",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e823cb01-10b1-4fe2-80ac-be6de6fd8d05",
+      "comment": "",
+      "command": "click",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f67a99f8-7e97-4437-b93f-0f9512ece408",
+      "comment": "",
+      "command": "type",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Poland"
+    }, {
+      "id": "a0e7aa42-06a9-4fcb-ab89-6b0b79555a9c",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(3)",
+      "targets": [
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='Search']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0e8933b-9efc-4e9d-8cb3-0c778c573d48",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=table:nth-child(4) tr:nth-child(1) > td:nth-child(2)",
+      "targets": [
+        ["css=table:nth-child(4) tr:nth-child(1) > td:nth-child(2)", "css:finder"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'9.57956')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e389fe6-aff0-4ec1-8fbe-634432a1c926",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=tr:nth-child(6) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(6) > td:nth-child(3)", "css:finder"],
+        ["xpath=//tr[6]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'10.03')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b3d1547-7fc2-45d4-b0fb-fbd3b77942c2",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=temperatureChart",
+      "targets": [
+        ["id=temperatureChart", "id"],
+        ["css=#temperatureChart", "css:finder"],
+        ["xpath=//canvas[@id='temperatureChart']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "08c67f62-f99b-4e10-942c-9b28237b53a1",
+    "name": "Search up a country and very the official data and graph are displayed correctly",
+    "commands": [{
+      "id": "b005c412-d41a-4461-971f-5730164e9d00",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/website/web.php?countryName=Germany",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57ab71ce-1f71-44ad-bc86-f56f5ff57661",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bcedc52a-1d08-4f01-ab8c-06b6f9fcb17c",
+      "comment": "",
+      "command": "click",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd556c81-04ea-4cc3-b464-c1aeaacbebfc",
+      "comment": "",
+      "command": "type",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Poland"
+    }, {
+      "id": "df1bd1ec-7650-466f-b829-526f881ea94f",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(3)",
+      "targets": [
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='Search']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a116ed0f-b716-4e21-a569-3caf63623422",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=table:nth-child(1) tr:nth-child(11) > td:nth-child(2)",
+      "targets": [
+        ["css=table:nth-child(1) tr:nth-child(11) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/table/tbody/tr[11]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'7.82')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c90b0b2-ceae-491f-9e12-30fb649e3a92",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=historicalTemperatureChart",
+      "targets": [
+        ["id=historicalTemperatureChart", "id"],
+        ["css=#historicalTemperatureChart", "css:finder"],
+        ["xpath=//canvas[@id='historicalTemperatureChart']", "xpath:attributes"],
+        ["xpath=//div[3]/canvas", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ce77ccc1-5b24-4446-98de-8fabd57250e4",
+    "name": "Search up a country, verify new results and search for another and do the same.",
+    "commands": [{
+      "id": "2ef637d3-983f-4779-925a-927146ecbbda",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/website/web.php?countryName=Germany",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f879d9ef-c025-4a38-8b63-cfa86bf37379",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d38f7f33-b7c9-4e36-ade4-e97c279303a8",
+      "comment": "",
+      "command": "click",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6013f04-2bb4-4842-b34e-f8fc5b5fe36a",
+      "comment": "",
+      "command": "type",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Poland"
+    }, {
+      "id": "e8363642-c5f9-4120-ae9a-f014cd4ce375",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(3)",
+      "targets": [
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='Search']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a7fcce4-87cd-4c01-a2bf-a914608d785a",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=h3:nth-child(3)",
+      "targets": [
+        ["css=h3:nth-child(3)", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Temperature Data for Poland')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "546f2a5e-0438-4af1-a047-53766b77c7d1",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=tr:nth-child(5) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(3)", "css:finder"],
+        ["xpath=//tr[5]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'10.32')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8aaa7dc-d41e-4672-b12e-1f4c8a4b2ad7",
+      "comment": "",
+      "command": "click",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ead6a09b-78f6-4472-9f09-4fdf8d23e7ab",
+      "comment": "",
+      "command": "type",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Lithuania"
+    }, {
+      "id": "55d30c5b-47b3-4de6-8a71-85a5defd2d3d",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(3)",
+      "targets": [
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='Search']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7debe9a-4526-45e8-90e7-d549526d424a",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=h3:nth-child(3)",
+      "targets": [
+        ["css=h3:nth-child(3)", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Temperature Data for Lithuania')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "628688ad-5138-4f66-b007-4fe1adc89a8e",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=tr:nth-child(4) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(3)", "css:finder"],
+        ["xpath=//tr[4]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'8.16')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "af82d871-8d8b-4c5a-a987-e70ca72c90b4",
+    "name": "Search up a country and refresh the page, verify the country shows",
+    "commands": [{
+      "id": "f3476813-8153-413b-8e2c-1c839fff3daa",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/website/web.php?countryName=Germany",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3651f253-81b4-4a8f-aa0d-3f740a0e66ec",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edec60e6-5ca9-4c0f-ab87-cb5ce2947338",
+      "comment": "",
+      "command": "click",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "968048aa-9019-42bf-adec-2a2e0d0bf2c9",
+      "comment": "",
+      "command": "type",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Poland"
+    }, {
+      "id": "7957f36e-cada-415b-aedf-83fc018753cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(3)",
+      "targets": [
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='Search']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2854695e-c896-4b51-b92e-25e4bd05667f",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=table:nth-child(4) tr:nth-child(5) > td:nth-child(2)",
+      "targets": [
+        ["css=table:nth-child(4) tr:nth-child(5) > td:nth-child(2)", "css:finder"],
+        ["xpath=//tr[5]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'9.87461')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "47d1d76f-9e8e-49da-b287-033c0578726a",
+    "name": "Search up a country, resize the window and verify the results show",
+    "commands": [{
+      "id": "b19a3dd9-3d9b-40a4-8359-3eda66d52e7e",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/website/web.php?countryName=Germany",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3fbfcdb-223d-4eec-95c4-1741da737e34",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eea4b8c7-99cf-4a5b-bddc-13bc88833f8e",
+      "comment": "",
+      "command": "click",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3119b9b4-55ea-46cf-b464-6983a31de2d4",
+      "comment": "",
+      "command": "type",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Poland"
+    }, {
+      "id": "305d3788-632b-48da-9fe2-22c5f0e67aeb",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(3)",
+      "targets": [
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='Search']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13e67bc2-5579-4ae1-a548-251509eecff2",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=tr:nth-child(6) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(6) > td:nth-child(3)", "css:finder"],
+        ["xpath=//tr[6]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'10.03')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ca4e3a1-daee-4ece-a974-50580acf6220",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=historicalTemperatureChart",
+      "targets": [
+        ["id=historicalTemperatureChart", "id"],
+        ["css=#historicalTemperatureChart", "css:finder"],
+        ["xpath=//canvas[@id='historicalTemperatureChart']", "xpath:attributes"],
+        ["xpath=//div[3]/canvas", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "b64b1671-8959-4521-8413-287fe5ebb735",
+    "name": "Search up an invalid country and verify this does not work",
+    "commands": [{
+      "id": "77aa4b8b-d9c0-4562-bda7-d3dc8b419195",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/website/web.php?countryName=Germany",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dff55df6-56d7-4ec5-a129-c705d9dc819c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "668d54ca-4fe9-4e9a-bb38-5c7372555ddd",
+      "comment": "",
+      "command": "click",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2d3a015-68ad-46f8-bee6-01693ff8132f",
+      "comment": "",
+      "command": "type",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "sdsdsd"
+    }, {
+      "id": "31eed5bc-b9f5-4c51-bc77-714cdfab35f0",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(3)",
+      "targets": [
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='Search']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25b2151e-3af1-4201-9e29-a2bee4e63e22",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=tr:nth-child(5) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(2)", "css:finder"],
+        ["xpath=//tr[5]/td[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c90f5589-9a66-4255-9616-596b7d8a0ddc",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=historicalTemperatureChart",
+      "targets": [
+        ["id=historicalTemperatureChart", "id"],
+        ["css=#historicalTemperatureChart", "css:finder"],
+        ["xpath=//canvas[@id='historicalTemperatureChart']", "xpath:attributes"],
+        ["xpath=//div[3]/canvas", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "19cd3b10-8351-4237-9216-c96cc9d1f2d9",
+    "name": "Search up a country and confirm all headings for tables are present",
+    "commands": [{
+      "id": "01486a92-c552-4b28-b2f4-4f41e41d3fd4",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/website/web.php?countryName=Germany",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "929c230d-7b92-4e73-a28f-727aa67470be",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "277b5d43-17d0-4072-acc3-bd9b4e179c96",
+      "comment": "",
+      "command": "click",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a6ceb0d-5268-43ae-af28-f11a8117ce71",
+      "comment": "",
+      "command": "type",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Poland"
+    }, {
+      "id": "c4898535-5541-4aea-8c0f-c8bc4a796403",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(3)",
+      "targets": [
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='Search']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b35d0e9-86e3-45af-87bf-6863ec8f8c55",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=table:nth-child(4) th:nth-child(2)",
+      "targets": [
+        ["css=table:nth-child(4) th:nth-child(2)", "css:finder"],
+        ["xpath=//th[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bda7dd3a-6dde-43ea-97fa-e7b2e3c170ef",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=h3:nth-child(6)",
+      "targets": [
+        ["css=h3:nth-child(6)", "css:finder"],
+        ["xpath=//h3[2]", "xpath:position"],
+        ["xpath=//h3[contains(.,'Historical Official Temperatures (1950 - 2020) for Poland')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "316e0f94-6a65-4cae-aa55-5c56c9f495b6",
+    "name": "Search up a country and verify that all the years from 1950-2020 are present",
+    "commands": [{
+      "id": "15c2682d-5a7c-48d6-a0bc-e4323a27f1fd",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/website/web.php?countryName=Germany",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5fa26e78-8445-4de8-88ba-f17e5cff885a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4fd5936f-2fd0-4e18-bd5d-2216672d3197",
+      "comment": "",
+      "command": "click",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4abbb27-27ca-4792-9412-4c9fbba27bea",
+      "comment": "",
+      "command": "type",
+      "target": "id=countryName",
+      "targets": [
+        ["id=countryName", "id"],
+        ["name=countryName", "name"],
+        ["css=#countryName", "css:finder"],
+        ["xpath=//input[@id='countryName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Poland"
+    }, {
+      "id": "ee6f7a64-5e9a-488b-8fe0-9c6b603183c3",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(3)",
+      "targets": [
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='Search']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "596bf3c0-778c-4bea-907c-d7e6c738eab5",
+      "comment": "",
+      "command": "click",
+      "target": "css=table:nth-child(1) tr:nth-child(2) > td:nth-child(2)",
+      "targets": [
+        ["css=table:nth-child(1) tr:nth-child(2) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/table/tbody/tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'8.48')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b665d783-391b-4085-bf24-842b21b23eeb",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=table:nth-child(1) tr:nth-child(1) > td:nth-child(2)",
+      "targets": [
+        ["css=table:nth-child(1) tr:nth-child(1) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/table/tbody/tr/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'8.19')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6080cf5f-bd25-432e-9cd0-519fcb68be4e",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=tr:nth-child(71) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(71) > td:nth-child(2)", "css:finder"],
+        ["xpath=//tr[71]/td[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "3074205e-4aed-48c7-9ec3-708c91ab9ebb",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost/", "http://localhost/website/web.php?countryName=Germany"],
+  "plugins": []
+}
